@@ -15,7 +15,9 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/yourusername/SteamActivityTracker.git
-   cd SteamActivityTracker
+   ```
+   ```bash
+    cd SteamActivityTracker
    ```
 2. Установите необходимые пакеты:
    ```bash
@@ -110,7 +112,9 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/SteamActivityTracker.git
-   cd SteamActivityTracker
+   ```
+   ```bash
+    cd SteamActivityTracker
    ```
 2. Install the required packages:
    ```bash
