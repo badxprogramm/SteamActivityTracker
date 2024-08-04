@@ -89,3 +89,98 @@
   - **get_player_summaries**: Получение информации о пользователях.
   - **check_status**: Проверка текущего статуса пользователя и запись в лог.
 - **main**: Основная функция программы.
+#
+# EN
+
+
+# SteamActivityTracker
+
+**SteamActivityTracker** is a utility for tracking Steam users' activity. The program allows you to monitor a user's status, their current game, and their friends' activities to identify potential joint gaming opportunities. All information is logged into a file for later analysis.
+
+## Requirements
+
+- Python 3.x
+- Installed packages:
+  - `configparser`
+  - `requests`
+  - `colorama`
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/SteamActivityTracker.git
+   cd SteamActivityTracker
+   ```
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Configuration
+
+1. On the first run, the program will create a `config.ini` file in the current directory. Do not share this file with anyone.
+2. Enter your Steam API key when prompted by the program.
+
+## Usage
+
+1. Run the program:
+
+   ```bash
+   python main.py
+   ```
+2. Follow the on-screen instructions:
+   - Enter the Steam profile URL you want to track.
+   - Choose the tracking method:
+     - `1` for tracking only the target's activity.
+     - `2` for tracking the target's and their friends' activity.
+   - Enter the check interval in seconds.
+
+## Stopping the Program
+
+To stop the program, press `Ctrl+C`.
+
+## Sample Output
+
+```
+
+▄▄▄▄    ▄▄▄      ▓█████▄  ▒██   ██▒ ███▄ ▄███▓ ▄▄▄     ▄▄▄█████▓▄▄▄██▄▄▄▓
+▓█████▄ ▒████▄    ▒██▀ ██▌▒▒ █ █ ▒░▓██▒▀█▀ ██▒▒████▄   ▓  ██▒ ▓▒▓  ██▒ ▓▒
+▒██▒ ▄██▒██  ▀█▄  ░██   █▌░░  █   ░▓██    ▓██░▒██  ▀█▄ ▒ ▓██░ ▒░▒ ▓██░ ▒░
+▒██░█▀  ░██▄▄▄▄██ ░▓█▄   ▌ ░ █ █ ▒ ▒██    ▒██ ░██▄▄▄▄██░ ▓██▓ ░ ░ ▓██▓ ░ 
+░▓█  ▀█▓ ▓█   ▓██▒░▒████▓ ▒██▒ ▒██▒▒██▒   ░██▒ ▓█   ▓██▒ ▒██▒ ░   ▒██▒ ░ 
+░▒▓███▀▒ ▒▒   ▓▒█░ ▒▒▓  ▒ ▒▒ ░ ░▓ ░░ ▒░   ░  ░ ▒▒   ▓▒█░ ▒ ░░     ▒ ░░   
+▒░▒   ░   ▒   ▒▒ ░ ░ ▒  ▒ ░░   ░▒ ░░  ░      ░  ▒   ▒▒ ░   ░        ░    
+ ░    ░   ░   ▒    ░ ░  ░  ░    ░  ░      ░     ░   ▒    ░        ░      
+ ░            ░  ░   ░     ░    ░         ░         ░  ░                 
+      ░            ░
+
+Enter your Steam API key: [your key]
+Enter Steam profile URL: https://steamcommunity.com/id/username/
+Choose tracking method:
+1. Track only the target's activity.
+2. Track the target's and their friends' activity for joint gaming opportunities.
+Enter tracking method number (1 or 2): 1
+Enter check interval in seconds (e.g., 10): 10
+Starting tracking. Press Ctrl+C to exit.
+```
+
+## Function Descriptions
+
+- **get_config**: Retrieves the configuration object. If the configuration file does not exist, a new one is created.
+- **create_default_config**: Creates a configuration file with an empty value for the API key.
+- **set_steam_api_key**: Sets the Steam API key in the configuration file.
+- **get_steam_api_key**: Retrieves the Steam API key from the configuration file.
+- **setup_config**: Configures the configuration file. Prompts the user for the API key if it is not provided.
+- **print_welcome_message**: Prints a welcome message with colors.
+- **get_tracking_method**: Gets the tracking method from the user.
+- **sanitize_filename**: Removes invalid characters from the filename.
+- **write_status_to_file**: Writes a message to the tracking file.
+- **log_new_tracking**: Logs a break in the tracking file.
+- **Tracker**: The main class for tracking user activity.
+  - **extract_user_id**: Extracts the Steam ID from a custom Steam profile URL.
+  - **get_username**: Retrieves the username.
+  - **get_friends**: Retrieves the user's friends list.
+  - **get_player_summaries**: Retrieves information about users.
+  - **check_status**: Checks the user's current status and logs it.
+- **main**: The main function of the program.
