@@ -14,7 +14,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/yourusername/SteamActivityTracker.git
+   git clone https://github.com/badxprogramm/SteamActivityTracker.git
    ```
    ```bash
     cd SteamActivityTracker
@@ -111,7 +111,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/SteamActivityTracker.git
+   git clone https://github.com/badxprogramm/SteamActivityTracker.git
    ```
    ```bash
     cd SteamActivityTracker
